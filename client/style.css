@@ -1,0 +1,97 @@
+.titleLine{
+    position: fixed;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    background-color:#E6E6FA;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style:normal;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.row.tabs{
+    position: relative;
+    top: 100px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    
+}
+
+.col-12.contents{
+  position: relative;
+  top: 50px;
+}
+
+.tab-pane{
+  position: relative;
+  left: 10%;
+  width: 50%;
+}
+
+.bookingresult{
+  position: relative;
+  top: 50px;
+  
+}
+
+.cancelresult{
+  position: relative;
+  top: 50px;
+  
+}
+
+.card.status{
+  position: relative;
+  top: 50px;
+  left: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: justify;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: blue;
+  padding-left: 15px;
+
+  
+}
+
+.card.history{
+  position: relative;
+  top: 25px;
+  left: 50px;
+  margin: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: justify;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: blue;
+  padding-left: 15px;
+
+  
+}
+
+.historyresult{
+  position: relative;
+  top: 50px;
+  
+}
+
+.bookform{
+  position: relative;
+  top: 25px;
+}
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+
+.nav-link{
+    text-align: center;
+}

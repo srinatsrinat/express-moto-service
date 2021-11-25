@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>
+          SS motorcycle service centre
+      </title>
+      <link href='style.css' rel='stylesheet'>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   
+  </head>
+  <body>
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+    <div class="row">
+        <div class="col-12">
+            <span class="titleLine"> Welcome to SS Moto Express Services </span>
+        </div>
+    
+
+    <div class="row tabs">
+        <div class="col-12">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Book Service Appointment</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Cancel Service Appointment</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Check Service Status</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Check Vehicle Service History With Our Service Center</a>
+          </div>
+        </div>
+
+
+
+        <div class="col-12 contents">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">   
+            
+              <h5>Please provide the following details:</h5> (For demo - please book your own)
+              <form class="bookform" >
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Registered Motorcycle Number</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Eg: TNxxAxxxx">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Customer Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your full name please">
+                </div>
+                <div class="form-group">
+                  <label for="validationTextarea">Complaints</label>
+                  <textarea class="form-control" id="validationTextarea" placeholder="Share vehicle related problems that you want us to look into"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput3" min="2021-11-25T10:00"
+                  max="2031-02-20T16:30">Select a date and time (Enjoy our 24x7 service. Contact 9999 9999 99 for emergency pick up)</label>
+                  <input type="datetime-local" class="form-control" id="formGroupExampleInput3">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput4">Contact Number</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Please enter your mobile number">
+                </div>
+                <button class="btn btn-primary" onclick="collectBookingData()" type="button" name="collectbookform">Request Service</button>
+              </form>
+
+              <div class="bookingresult"></div>
+
+
+             </div>
+
+
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+              <h5>Please provide the registered motorcycle number    </h5>  (For demo - use the number you booked with or try TN22J5599) 
+                        <input type="text" class="form-control" id="deleteBooked" placeholder="Eg: TNxxAxxxx">
+             
+      
+                      <button class="btn btn-primary" style="position: relative; top:10px" onclick="deleteBooking()" type="button" name="deletebookingbutton">Cancel Booking</button>
+
+                   
+            
+          
+
+            </div>
+
+
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                
+              <h5>Please provide the registered motorcycle number</h5> (For demo -use the number you booked with or try TN22J5581, TN22J5587)
+                        <input type="text" class="form-control" id="statusCheck" placeholder="Eg: TNxxAxxxx" >
+      
+      
+                      <button class="btn btn-primary" style="position: relative; top:10px" onclick="checkingStatus()" type="button" name="statuscheckbutton">Check Service Status</button>
+
+                      
+
+               
+
+            </div>
+
+
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+
+              <h5>Please provide the registered motorcycle number</h5> (For demo - TN22J5699)
+
+         
+              <input type="text" class="form-control" id="historyCheck" placeholder="Eg: TNxxAxxxx">
+   
+
+            <button class="btn btn-primary" style="position: relative; top:10px" onclick="checkingHistory()" type="button" name="historycheckbutton">Get Service History</button>
+
+            
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
